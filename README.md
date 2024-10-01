@@ -1,6 +1,6 @@
 # 🎉 Welcome to the OOP in C++ Projects Repository! 🚀
 
-[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B)
+[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B)  
 [![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
 This repository showcases a collection of projects that demonstrate the principles of **Object-Oriented Programming (OOP)** in **C++**. Each project highlights key OOP concepts like:
@@ -11,6 +11,12 @@ This repository showcases a collection of projects that demonstrate the principl
 - 🔐 **Encapsulation**
 - 🎨 **Abstraction**
 - 🤝 **Friend Functions and Classes**
+
+---
+
+### ⚠️ Compatibility Note
+
+**This project can only run on Linux distributions.** If you want to run it on Windows, you will need to modify the Linux-specific functions found in the `windows.h` built-in library. The window-based functions that require changes are documented in the repository under the name [UI_OwnLibrary_C++](https://github.com/Haseebi-khan/Object-oriented-programming-in-C-Plus-Plus/tree/main/UI_OwnLibrary_C%2B%2B/UI_OwnLibrary_C%2B%2B).
 
 ---
 
