@@ -1,7 +1,6 @@
 # 🎉 Welcome to the Hotel Management Project Repository! 🚀
 
-[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B)  
-[![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
+[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B) [![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
 This repository showcases a project that demonstrates the principles of **Object-Oriented Programming (OOP)** in **C++**. This project highlights key OOP concepts such as:
 
