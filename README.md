@@ -1,7 +1,6 @@
 # 🎉 Welcome to the OOP in C++ Projects Repository! 🚀
 
-[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B)  
-[![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
+[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B) [![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
 This repository showcases a collection of projects that demonstrate the principles of **Object-Oriented Programming (OOP)** in **C++**. Each project highlights key OOP concepts such as:
 
