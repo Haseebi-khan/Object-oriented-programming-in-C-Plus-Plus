@@ -1,8 +1,9 @@
-# 🎉 Welcome to the OOP in C++ Project Repository! 🚀
+# 🎉 Welcome to the Hotel Management Project Repository! 🚀
 
-[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B) [![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
+[![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B)  
+[![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
-This repository showcases a collection of projects that demonstrate the principles of **Object-Oriented Programming (OOP)** in **C++**. Each project highlights key OOP concepts such as:
+This repository showcases a project that demonstrates the principles of **Object-Oriented Programming (OOP)** in **C++**. This project highlights key OOP concepts such as:
 
 - 🏛️ **Classes and Objects**
 - 🔄 **Inheritance** (including all levels)
@@ -21,7 +22,7 @@ This repository showcases a collection of projects that demonstrate the principl
 
 ### 🚀 Features
 
-These projects utilize advanced C++ features, including:
+This project utilizes advanced C++ features, including:
 
 - 📂 The **fstream** library for file handling
 - 🔢 **Static Data Types** for efficient memory management
@@ -31,6 +32,6 @@ These projects utilize advanced C++ features, including:
 
 ---
 
-### 🌟 Why These Projects?
+### 🌟 Why This Project?
 
-These examples provide practical, hands-on demonstrations of OOP principles, helping you understand how to apply them effectively in real-world **C++** scenarios. Explore the code and elevate your **OOP** skills to the next level! 💡
+This example provides a practical, hands-on demonstration of OOP principles, helping you understand how to apply them effectively in a real-world **C++** scenario. Explore the code and elevate your **OOP** skills to the next level! 💡
