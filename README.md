@@ -1,4 +1,4 @@
-# 🎉 Welcome to the OOP in C++ Projects Repository! 🚀
+# 🎉 Welcome to the OOP in C++ Project Repository! 🚀
 
 [![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B) [![OOP](https://img.shields.io/badge/Concepts-OOP-blueviolet.svg)](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
