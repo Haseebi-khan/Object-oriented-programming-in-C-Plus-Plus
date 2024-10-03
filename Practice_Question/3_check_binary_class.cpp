@@ -3,6 +3,9 @@
 
 using namespace std;
 
+
+///                                                    DONE
+
 // class Empty {
 //     int doos;
 //     string sad;
@@ -31,79 +34,70 @@ using namespace std;
 
 //     return 0;
 // }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class binary
+class Binary
 {
 private:
-    string good;
+    string _string;
 
 public:
-    void read(void)
+    void dataEntry()
     {
-        cout << "Enter the binary string: ";
-        getline(cin, good);
+        cout << "Enter the Binary String: ";
+        getline(cin, _string);
     }
-    void display(void)
+    void display() { cout << "The Binary String is: " << _string << endl; }
+    bool check_binary()
     {
-        cout << good;
+        bool found = false;
+        for (int i = 0; i < _string.length(); i++)
+        {
+            if (_string[i] != '0' && _string[i] != '1')
+            {
+                found = true;
+                break;
+            }
+        }
+        return found;
     }
-    bool chk_bina(void);
-    void incorrect(void);
-    void one_compliement();
+    void show_Error()
+    {
+        cout << "String is not a binary string: " << _string << endl;
+    }
+    void one_compliment()
+    {
+        string complimentString;
+        complimentString = _string;
+        for (int i = 0; i < _string.length(); i++)
+        {
+            if (complimentString[i] == '1')
+            {
+                complimentString[i] = '0';
+            }
+            else
+            {
+                complimentString[i] = '1';
+            }
+        }
+        cout << "The One's Compliment is: " << complimentString << endl;
+    }
 };
-
-void binary ::one_compliement()
-{
-    for (int i = 0; i < good.length(); i++)
-    {
-        if (good[i] == '1')
-        {
-            good[i] = '0';
-        }
-        else
-        {
-            good[i] = '1';
-        }
-    }
-}
-
-void binary ::incorrect(void)
-{
-    cout << "Incorrect binary: " << good << endl;
-}
-
-bool binary ::chk_bina(void)
-{
-    bool found = false;
-
-    for (int i = 0; i < good.length(); i++)
-    {
-        if (good[i] != '0' && good[i] != '1')
-        {
-            found = true;
-            break;
-        }
-    }
-    return found;
-}
 
 int main()
 {
-    binary b;
-    b.read();
 
-    cout << endl;
-
-    if (b.chk_bina() == true)
+    Binary _String;
+    _String.dataEntry();
+    if (_String.check_binary() == true)
     {
-        b.incorrect();
+        _String.show_Error();
     }
     else
     {
-        b.display();
-        cout << endl;
-        b.one_compliement();
-        b.display();
+        _String.display();
+        _String.one_compliment();
     }
 
     return 0;
