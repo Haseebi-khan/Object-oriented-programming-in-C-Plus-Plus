@@ -1,42 +1,44 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-class empolyies 
+//                                                                             Done
+
+class Empolyies
 {
-    private:
-        string private_name;
-    public:
-        void eemp (string name );
-        void display()
-        {
-            cout << "PRAVTE Name: "<< private_name<<endl;
-            cout << "Public Name: "<< public_name<<endl;
-        }
-        string public_name;
+private:
+    string private_name;
+
+public:
+    string public_name;
+    void Emp(string name);
+    void show_personalname()
+    {
+        cout << "Pravite Name: " << private_name << endl;
+    }
+    void display()
+    {
+        cout << "Gaming Name: " << public_name << endl;
+        show_personalname();
+    }
 };
 
-void empolyies :: eemp (string name )
-{
-
-    private_name = name;
-
-}
+void Empolyies ::Emp(string name) { private_name = name; }
 
 int main()
 {
 
-    empolyies n1;
+    Empolyies e1;
+    cout << "Enter your Gaming name: ";
+    string gameing_name, real_name;
+    getline(cin, gameing_name);
+    cout << "Enter your private name: ";
+    getline(cin, real_name);
 
-    cout << "Enter the private name: ";
-    string privateName;
-    cin >>privateName;
-    n1.eemp(privateName);
+    e1.Emp(real_name);
+    e1.public_name = gameing_name;
 
-    cout << "Enter the public name: ";
-    cin >> n1.public_name;
-    
-    n1.display();   
+    e1.display();
 
+    cout << endl;
     return 0;
 }
