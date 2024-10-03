@@ -1,32 +1,30 @@
 #include <iostream>
 using namespace std;
 
-typedef struct sajsdhkjasd {
-    int age[2];
-}p1;
-
+typedef struct AgePair {
+    int ages[2];
+} AgePair;
 
 int main()
 {
-    p1 b[10];
+    AgePair people[10];  
     
-    for (int i = 0; i < 10; i++)
+    for (int person = 0; person < 10; person++)
     {
-        for (int j = 0; j < 2; j++)
+        for (int ageIndex = 0; ageIndex < 2; ageIndex++)
         {
-            b[i].age[j] = i + j;
+            people[person].ages[ageIndex] = person + ageIndex;
         }
     }
     
-    for (int i = 0; i < 10; i++)
+    for (int person = 0; person < 10; person++)
     {
-        for (int j = 0; j < 2; j++)
+        for (int ageIndex = 0; ageIndex < 2; ageIndex++)
         {
-            cout << b[i].age[j] << " ";
+            cout << people[person].ages[ageIndex] << " ";
         }
-        cout <<endl;
+        cout << endl;
     }
 
-    
     return 0;
 }
