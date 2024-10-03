@@ -1,52 +1,49 @@
 #include <iostream>
 using namespace std;
 
-class box
+//////////////////                                               DONE
+
+class Box
 {
-    double volumn;
+private:
+    double volume;
 
 public:
-    double lenght, width, height;
-    // member function
-    double getdata(double lenght, double height, double width);
-    void setdata(double i);
-    void displaydata()
-    {
-        cout << "The volumn is: " << volumn << endl;
-    }
+    double getData(double lenght, double height, double width);
+    void dataCalculation(int dataOfBox);
+    void displayData();
 };
 
-double box ::getdata(double lenght, double height, double width){
-    
-    double cal;
-    return cal = lenght * height * width;
-
+double Box::getData(double lenght, double height, double width)
+{
+    double Value = lenght * height * width;
+    return Value;
 }
 
-void box ::setdata(double i){
-    volumn = i;
+void Box::dataCalculation(int Value) 
+{ 
+    volume = Value; 
+}
+
+void Box::displayData() 
+{
+    cout << "The Volume is: " << volume << endl; 
 }
 
 int main()
 {
-    box b;
+    Box b1;
+    double lenght, height, width;
+    cout << "Enter Height: ";
+    cin >> height;
+    cout << "Enter Lenght: ";
+    cin >> lenght;
+    cout << "Enter Width: ";
+    cin >> width;
 
-    cout << "Enter the height: ";
-    cin >> b.height;
-    cout << "Enter the lenght: "; 
-    cin >> b.lenght;
-    cout << "Enter the width: ";
-    cin >> b.width;
+    b1.dataCalculation(b1.getData(height, lenght, width));
 
-    b.getdata(b.height, b.lenght, b.width);
-
-    b.setdata(b.getdata(b.height, b.lenght, b.width));
-
-    b.displaydata();
-
-
-
-
+    b1.displayData();
 
     return 0;
 }
