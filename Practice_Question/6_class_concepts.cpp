@@ -1,103 +1,84 @@
-// #include <iostream>
-
-// using namespace std;
-
-// void library ::counter()
-// {
-//     cout << "How many Books you want to store: ";
-//     count = 0;
-//     cin >> a_count;
-// }
-
-// class library
-// {
-//     int a_count;
-//     long serial[a_count];
-//     int id[a_count];
-//     int count;
-
-// public:
-//     string name[a_count];
-//     void counter();
-//     void read();
-
-// }
-
-// void library ::read()
-// {
-//     cout << "Enter the Name : ";
-//     cin >> name[a_count];
-//     cout << "Enter the Serial Number: ";
-//     cin >> serial[a_count];
-// }
-
-// int main()
-// {
-
-//     return 0;
-// }
-
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-class CS_student
+//                                                  Done
+
+class Library
 {
-    const int size = 10;
-    int id_no[size];
-    string student_name[size];
-    int count;
+    static const int a_count = 20;
+    long serial[a_count];
+    string id[a_count];
+    int count = 0;
 
 public:
-    void counter()
-    {
-        count = 0;
-    }
+    string name[a_count];
+    void counter();
     void read();
-    void display();
+    void display_all_books();
 };
 
-void CS_student::read()
+void Library::counter()
 {
-    for (int i = 0; i < size; i++)
-    {
-        cout << "Enter the name: ";
-        getline(cin, student_name[count]);
+    cout << "How many books do you want to store (up to 20)? ";
+    int type;
+    cin >> type;
 
-        cout << "Enter the Roll no: ";
-        cin >> id_no[count];
-        cin.ignore();
-        count++;
+    if (type > a_count)
+    {
+        cout << "It's not possible to enter more than 20 books." << endl;
+    }
+    else if (type <= 0)
+    {
+        cout << "Invalid number of books." << endl;
+    }
+    else
+    {
+        for (int i = 0; i < type; i++)
+        {
+            read();
+        }
     }
 }
 
-void CS_student::display()
+void Library::read()
 {
-    for (int i = 0; i < size; i++)
+    if (count < a_count)
     {
-        cout << "Name: " << student_name[i] << "\nRoll no: " << id_no[i] << endl;
+        cout << "Enter the name of the book: ";
+        cin >> name[count];
+
+        cout << "Enter the book ID: ";
+        cin >> id[count];
+
+        cout << "Enter the serial number: ";
+        cin >> serial[count];
+
+        count++;
+    }
+    else
+    {
+        cout << "Maximum limit of books reached." << endl;
+    }
+}
+
+void Library::display_all_books()
+{
+    for (int i = 0; i < count; i++)
+    {
+        cout << "\nBook " << i + 1 << ":" << endl;
+        cout << "Name: " << name[i] << endl;
+        cout << "ID: " << id[i] << endl;
+        cout << "Serial no: " << serial[i] << endl;
     }
 }
 
 int main()
 {
-    CS_student s1;
-
-    s1.read();
-    s1.display();
-    cout << endl;
+    Library l1;
+    l1.counter();
+    l1.display_all_books();
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
