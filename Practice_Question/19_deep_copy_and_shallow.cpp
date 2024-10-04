@@ -1,71 +1,71 @@
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// class Array
-// {
-// private:
-//     int size;
-//     int *data;
-// public:
-//     // Constructor
-//     Array(): size(0), data(nullptr) {}
-//     Array(int sz)
-//     {
-//         size = sz;
-//         data = new int[sz];
-//     }
-//     // Copy Constructor for deep copy
-//     Array(const Array &other)
-//     {
-//         size = other.size;
-//         data = new int[other.size];
-//         for (int i = 0; i < size; ++i)
-//         {
-//             data[i] = other.data[i];
-//         }
-//     }
-//     // Destructor
-//     ~Array()
-//     {
-//         delete[] data;
-//     }
-//     // Function to set value at index
-//     void setValue(int index, int value)
-//     {
-//         if (index >= 0 && index < size)
-//             data[index] = value;
-//     }
+class Array
+{
+private:
+    int size;
+    int *data;
+public:
+    // Constructor
+    Array(): size(0), data(nullptr) {}
+    Array(int sz)
+    {
+        size = sz;
+        data = new int[sz];
+    }
+    // Copy Constructor for deep copy
+    Array(const Array &other)
+    {
+        size = other.size;
+        data = new int[other.size];
+        for (int i = 0; i < size; ++i)
+        {
+            data[i] = other.data[i];
+        }
+    }
+    // Destructor
+    ~Array()
+    {
+        delete[] data;
+    }
+    // Function to set value at index
+    void setValue(int index, int value)
+    {
+        if (index >= 0 && index < size)
+            data[index] = value;
+    }
 
-//     // Function to print array
-//     void print()
-//     {
-//         for (int i = 0; i < size; ++i)
-//         {
-//             cout << data[i] << " ";
-//         }
-//         cout << endl;
-//     }
-// };
-// int main()
-// {
-//     // Create an Array object
-//     Array arr1(5);
-//     arr1.setValue(0, 1);
-//     arr1.setValue(1, 2);
-//     arr1.setValue(2, 3);
-//     arr1.setValue(3, 4);
-//     arr1.setValue(4, 5);
-//     // Create a copy of arr1 using the copy constructor
-//     Array arr2 = arr1;
-//     // Modify arr2
-//     arr2.setValue(0, 10);
-//     // Print both arrays
-//     cout << "Array 1: ";
-//     arr1.print();
-//     cout << "Array 2: ";
-//     arr2.print();
-//     return 0;
-// }
+    // Function to print array
+    void print()
+    {
+        for (int i = 0; i < size; ++i)
+        {
+            cout << data[i] << " ";
+        }
+        cout << endl;
+    }
+};
+int main()
+{
+    // Create an Array object
+    Array arr1(5);
+    arr1.setValue(0, 1);
+    arr1.setValue(1, 2);
+    arr1.setValue(2, 3);
+    arr1.setValue(3, 4);
+    arr1.setValue(4, 5);
+    // Create a copy of arr1 using the copy constructor
+    Array arr2 = arr1;
+    // Modify arr2
+    arr2.setValue(0, 10);
+    // Print both arrays
+    cout << "Array 1: ";
+    arr1.print();
+    cout << "Array 2: ";
+    arr2.print();
+    return 0;
+}
 
 // ===========================================================================================
 
@@ -142,18 +142,16 @@
 //     int a;
 //     int b;
 //     string *p;
-//     public:
-//     Demo() : a(0), b(0), p(nullptr)
-//     {
 
-//     }
-//     void setdata(int x,int y,string z)
+// public:
+//     Demo() : a(0), b(0), p(nullptr) {}
+//     void setdata(int x, int y, string z)
 //     {
-//         a=x;
-//         b=y;
+//         a = x;
+//         b = y;
 //         p = new string(z);
 //     }
-//     Demo(const Demo& v )
+//     Demo(const Demo &v)
 //     {
 //         a = v.a;
 //         b = v.b;
@@ -162,17 +160,19 @@
 //     }
 //     void showdata()
 //     {
-//         std::cout << "value of a is : " <<a<< std::endl;
-//         std::cout << "value of b is : " <<b<< std::endl;
-//         std::cout << "value of *p is : " <<*p<< std::endl;
+//         std::cout << "value of a is : " << a << std::endl;
+//         std::cout << "value of b is : " << b << std::endl;
+//         std::cout << "value of *p is : " << *p << std::endl;
 //     }
 // };
 // int main()
 // {
-//   Demo d1;
-//   d1.setdata(4,5,"7");
-//   Demo d2 = d1;
-//   d2.showdata();
+//     Demo d1;
+//     d1.setdata(4, 5, "7");
+//     d1.showdata();
+//     cout << "=====================\n";
+//     Demo d2 = d1;
+//     d2.showdata();
 //     return 0;
 // }
 // Output:
@@ -199,14 +199,14 @@
 // using namespace std;
 // class Demo
 // {
-//     public:
+// public:
 //     int a;
 //     int b;
 //     int *p;
 
 //     Demo()
 //     {
-//         p=new int;
+//         p = new int;
 //     }
 //     Demo(Demo &d)
 //     {
@@ -215,26 +215,26 @@
 //         p = new int;
 //         *p = (*d.p);
 //     }
-//     void setdata(int x,int y,int z)
+//     void setdata(int x, int y, int z)
 //     {
-//         a=x;
-//         b=y;
-//         *p=z;
+//         a = x;
+//         b = y;
+//         *p = z;
 //     }
 //     void showdata()
 //     {
-//         std::cout << "value of a is : " <<a<< std::endl;
-//         std::cout << "value of b is : " <<b<< std::endl;
-//         std::cout << "value of *p is : " <<*p<< std::endl;
+//         std::cout << "value of a is : " << a << std::endl;
+//         std::cout << "value of b is : " << b << std::endl;
+//         std::cout << "value of *p is : " << *p << std::endl;
 //     }
 // };
 // int main()
 // {
-//   Demo d1;
-//   d1.setdata(4,5,7);
-//   Demo d2 = d1;
-//   d2.showdata();
-//   return 0;
+//     Demo d1;
+//     d1.setdata(4, 5, 7);
+//     Demo d2 = d1;
+//     d2.showdata();
+//     return 0;
 // }
 // Output:
 
