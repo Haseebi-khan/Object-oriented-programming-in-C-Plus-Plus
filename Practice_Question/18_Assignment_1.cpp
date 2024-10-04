@@ -1,267 +1,267 @@
-// Problem 1:
-// Suppose we want to design a banking application that tracks customer accounts.
-// We need to create a class called "UserAccount" to represent each customer's account.
-// Each account should have the following data members:
-// • Account number
-// • Account holder's name
-// • Account balance
-// • Account holder's bankname
-// To ensure data encapsulation, make these all data members private. Implement or provide public getter and setter
-// functions to allow other parts of the application to access and modify these data members. Print the user information
-// using DetailUser function. Store the bank account information of at least five students.
-#include <iostream>
+// // Problem 1:
+// // Suppose we want to design a banking application that tracks customer accounts.
+// // We need to create a class called "UserAccount" to represent each customer's account.
+// // Each account should have the following data members:
+// // • Account number
+// // • Account holder's name
+// // • Account balance
+// // • Account holder's bankname
+// // To ensure data encapsulation, make these all data members private. Implement or provide public getter and setter
+// // functions to allow other parts of the application to access and modify these data members. Print the user information
+// // using DetailUser function. Store the bank account information of at least five students.
+// #include <iostream>
 
-using namespace std;
+// using namespace std;
 
-class UserAccount
-{
-private:
-    string Account_holder_name;
-    string Account_holders_bankname;
-    double Account_balance;
-    double Account_number;
+// class UserAccount
+// {
+// private:
+//     string Account_holder_name;
+//     string Account_holders_bankname;
+//     double Account_balance;
+//     double Account_number;
 
-public:
-    void setter(string name, string bank_name, double acct_balance, double acct_number)
-    {
-        Account_holder_name = name;
-        Account_holders_bankname = bank_name;
-        Account_balance = acct_balance;
-        Account_number = acct_number;
-    }
-    void getter()
-    {
+// public:
+//     void setter(string name, string bank_name, double acct_balance, double acct_number)
+//     {
+//         Account_holder_name = name;
+//         Account_holders_bankname = bank_name;
+//         Account_balance = acct_balance;
+//         Account_number = acct_number;
+//     }
+//     void getter()
+//     {
 
-        cout << "Account holder name: " << Account_holder_name << endl;
-        cout << "Account holders bankname: " << Account_holders_bankname << endl;
-        cout << "Account balance: " << Account_balance << endl;
-        cout << "Account number: " << Account_number << endl;
-    }
-};
+//         cout << "Account holder name: " << Account_holder_name << endl;
+//         cout << "Account holders bankname: " << Account_holders_bankname << endl;
+//         cout << "Account balance: " << Account_balance << endl;
+//         cout << "Account number: " << Account_number << endl;
+//     }
+// };
 
-int main()
-{
-    int size = 5;
-    UserAccount users[size];
-    string Account_holder_name;
-    string Account_holders_bankname;
-    double Account_balance;
-    double Account_number = 9243;
-    cout << "-----------------------\n";
-    for (int i = 0; i < size; i++)
-    {
-        cout << "User :" << i + 1 << "\n";
-        cout << "Enter Account holder name: ";
-        getline(cin, Account_holder_name);
-        cout << "Enter Account holders bankname: ";
-        getline(cin, Account_holders_bankname);
-        cout << "Enter Account balance: ";
-        cin >> Account_balance;
-        Account_number++;
-        users[i].setter(Account_holder_name, Account_holders_bankname, Account_balance, Account_number);
-        cout << "-----------------------\n";
-        cin.ignore();
-    }
-    for (int i = 0; i < size; i++)
-    {
-        cout << "USER: " << i + 1 << endl;
-        users[i].getter();
-    }
+// int main()
+// {
+//     int size = 5;
+//     UserAccount users[size];
+//     string Account_holder_name;
+//     string Account_holders_bankname;
+//     double Account_balance;
+//     double Account_number = 9243;
+//     cout << "-----------------------\n";
+//     for (int i = 0; i < size; i++)
+//     {
+//         cout << "User :" << i + 1 << "\n";
+//         cout << "Enter Account holder name: ";
+//         getline(cin, Account_holder_name);
+//         cout << "Enter Account holders bankname: ";
+//         getline(cin, Account_holders_bankname);
+//         cout << "Enter Account balance: ";
+//         cin >> Account_balance;
+//         Account_number++;
+//         users[i].setter(Account_holder_name, Account_holders_bankname, Account_balance, Account_number);
+//         cout << "-----------------------\n";
+//         cin.ignore();
+//     }
+//     for (int i = 0; i < size; i++)
+//     {
+//         cout << "USER: " << i + 1 << endl;
+//         users[i].getter();
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
-== == == == == == == == == == == == == == == == == == == == == == == =
+// == == == == == == == == == == == == == == == == == == == == == == == =
 
 // Problem 2:
 // Create a class called "Stock" to represent a stock. Each stock should have a ticker symbol, a company name, a current
 // price, and a list of historical prices. Implement getter and setter functions for each data member. Add member functions
 // to calculate the average price over a given time period, as well as to determine whether the stock is currently overvalued
 // or undervalued.
-#include <iostream>
+// #include <iostream>
 
-                                                                         using namespace std;
+// using namespace std;
 
-class stock
-{
-private:
-    string ticket_symbol,
-        company_name;
-    double current_price;
-    double *historical_prices;
-    int number_historical_prices;
+// class stock
+// {
+// private:
+//     string ticket_symbol,
+//         company_name;
+//     double current_price;
+//     double *historical_prices;
+//     int number_historical_prices;
 
-public:
-    stock(string ticketsymbol, string companyname, double currentprice, double *historicalprices, int size)
-    {
-        ticket_symbol = ticketsymbol;
-        company_name = companyname;
-        current_price = currentprice;
-        number_historical_prices = size;
-        historical_prices = new double[size];
-        for (int i = 0; i < size; i++)
-        {
-            this->historical_prices[i] = historicalprices[i];
-        }
-    }
+// public:
+//     stock(string ticketsymbol, string companyname, double currentprice, double *historicalprices, int size)
+//     {
+//         ticket_symbol = ticketsymbol;
+//         company_name = companyname;
+//         current_price = currentprice;
+//         number_historical_prices = size;
+//         historical_prices = new double[size];
+//         for (int i = 0; i < size; i++)
+//         {
+//             this->historical_prices[i] = historicalprices[i];
+//         }
+//     }
 
-    ~stock()
-    {
-        delete[] historical_prices;
-    }
-    string get_ticket_symbol()
-    {
-        return ticket_symbol;
-    }
-    string get_company_name()
-    {
-        return company_name;
-    }
-    double get_current_price()
-    {
-        return current_price;
-    }
+//     ~stock()
+//     {
+//         delete[] historical_prices;
+//     }
+//     string get_ticket_symbol()
+//     {
+//         return ticket_symbol;
+//     }
+//     string get_company_name()
+//     {
+//         return company_name;
+//     }
+//     double get_current_price()
+//     {
+//         return current_price;
+//     }
 
-    double get_Average()
-    {
-        if (number_historical_prices <= 0)
-        {
-            return current_price;
-        }
-        else
-        {
-            double sum = 0;
-            for (int i = 0; i < number_historical_prices; i++)
-            {
-                sum += historical_prices[i];
-            }
-            return sum / number_historical_prices;
-        }
-    }
-    void get_overvaled()
-    {
-        double sum = 0;
-        for (int i = 0; i < number_historical_prices; i++)
-        {
-            sum += historical_prices[i];
-        }
-        double average = sum / number_historical_prices;
-        if (current_price > average)
-        {
-            cout << "Not Overvalued." << endl;
-        }
-        else
-        {
-            cout << "Stock is currently overvalued." << endl;
-        }
-    }
-};
+//     double get_Average()
+//     {
+//         if (number_historical_prices <= 0)
+//         {
+//             return current_price;
+//         }
+//         else
+//         {
+//             double sum = 0;
+//             for (int i = 0; i < number_historical_prices; i++)
+//             {
+//                 sum += historical_prices[i];
+//             }
+//             return sum / number_historical_prices;
+//         }
+//     }
+    // void get_overvaled()
+    // {
+    //     double sum = 0;
+    //     for (int i = 0; i < number_historical_prices; i++)
+    //     {
+    //         sum += historical_prices[i];
+    //     }
+    //     double average = sum / number_historical_prices;
+    //     if (current_price > average)
+    //     {
+    //         cout << "Not Overvalued." << endl;
+    //     }
+    //     else
+    //     {
+    //         cout << "Stock is currently overvalued." << endl;
+    //     }
+    // }
+// };
 
-int main()
-{
-    double historial_prices_list[] = {32, 75, 67, 83, 12};
-    double size = sizeof(historial_prices_list) / sizeof(historial_prices_list[0]);
+// int main()
+// {
+//     double historial_prices_list[] = {32, 75, 67, 83, 12};
+//     double size = sizeof(historial_prices_list) / sizeof(historial_prices_list[0]);
 
-    stock tesla("TSLA", "Tesla, Inc.", 50, historial_prices_list, size);
+//     stock tesla("TSLA", "Tesla, Inc.", 50, historial_prices_list, size);
 
-    cout << "Ticket Symbol: " << tesla.get_ticket_symbol() << endl;
-    cout << "Comapny name: " << tesla.get_company_name() << endl;
-    cout << "Current Price: " << tesla.get_current_price() << endl;
-    cout << "Averagr Price: " << tesla.get_Average() << endl;
-    tesla.get_overvaled();
-    return 0;
-}
+//     cout << "Ticket Symbol: " << tesla.get_ticket_symbol() << endl;
+//     cout << "Comapny name: " << tesla.get_company_name() << endl;
+//     cout << "Current Price: " << tesla.get_current_price() << endl;
+//     cout << "Averagr Price: " << tesla.get_Average() << endl;
+//     tesla.get_overvaled();
+// //     return 0;
+// // }
 
-== == == == == == == == == == == == == =
+// // == == == == == == == == == == == == == =
 
-// Problem 4:
-// Create a class called "Employee" to represent an employee. Each employee should have a name, an ID, a
-// salary, and a department. Implement getter and setter functions for each data member. Add member functions
-// to give an employee a raise, as well as to print out a list of all employees in a given department.
+// // Problem 4:
+// // Create a class called "Employee" to represent an employee. Each employee should have a name, an ID, a
+// // salary, and a department. Implement getter and setter functions for each data member. Add member functions
+// // to give an employee a raise, as well as to print out a list of all employees in a given department.
 
-#include <iostream>
+// #include <iostream>
 
-                                           using namespace std;
+//                                            using namespace std;
 
-class Employee
-{
-private:
-    string name, dept;
-    int id;
-    double salary;
+// class Employee
+// {
+// private:
+//     string name, dept;
+//     int id;
+//     double salary;
 
-public:
-    Employee(string names, string department, int ids, double salarys)
-    {
-        name = names;
-        dept = department;
-        id = ids;
-        salary = salarys;
-    }
-    void setname(string n)
-    {
-        name = n;
-    }
-    void setdept(string d)
-    {
-        dept = d;
-    }
-    void setsalary(double s)
-    {
-        salary = s;
-    }
-    string getname()
-    {
-        return name;
-    }
+// public:
+//     Employee(string names, string department, int ids, double salarys)
+//     {
+//         name = names;
+//         dept = department;
+//         id = ids;
+//         salary = salarys;
+//     }
+//     void setname(string n)
+//     {
+//         name = n;
+//     }
+//     void setdept(string d)
+//     {
+//         dept = d;
+//     }
+//     void setsalary(double s)
+//     {
+//         salary = s;
+//     }
+//     string getname()
+//     {
+//         return name;
+//     }
 
-    string getDept()
-    {
-        return dept;
-    }
+//     string getDept()
+//     {
+//         return dept;
+//     }
 
-    int getId()
-    {
-        return id;
-    }
+//     int getId()
+//     {
+//         return id;
+//     }
 
-    double getSalary()
-    {
-        return salary;
-    }
+//     double getSalary()
+//     {
+//         return salary;
+//     }
 
-    void Raise(double amount)
-    {
-        salary += amount;
-    }
-};
+//     void Raise(double amount)
+//     {
+//         salary += amount;
+//     }
+// };
 
-int main()
-{
-    Employee employees[4] = {
-        Employee("haseeb", "cs", 133, 600),
-        Employee("faheem", "cs", 45, 675),
-        Employee("haseeb", "bba", 34, 345),
-        Employee("haseeb", "bba", 23, 234)};
+// int main()
+// {
+//     Employee employees[4] = {
+//         Employee("haseeb", "cs", 133, 600),
+//         Employee("faheem", "cs", 45, 675),
+//         Employee("haseeb", "bba", 34, 345),
+//         Employee("haseeb", "bba", 23, 234)};
 
-    employees[0].Raise(543);
+//     employees[0].Raise(543);
 
-    cout << "After raise:" << endl;
-    cout << "Name: " << employees[0].getName() << ", salary: " << employees[0].getSalary() << endl;
+//     cout << "After raise:" << endl;
+//     cout << "Name: " << employees[0].getName() << ", salary: " << employees[0].getSalary() << endl;
 
-    cout << "Employees in department 'cs':" << endl;
-    for (int i = 0; i < 4; ++i)
-    {
-        if (employees[i].getDept() == "cs")
-        {
-            cout << "Name: " << employees[i].getName() << ", ID: " << employees[i].getId() << ", Salary: " << employees[i].getSalary() << endl;
-        }
-    }
+//     cout << "Employees in department 'cs':" << endl;
+//     for (int i = 0; i < 4; ++i)
+//     {
+//         if (employees[i].getDept() == "cs")
+//         {
+//             cout << "Name: " << employees[i].getName() << ", ID: " << employees[i].getId() << ", Salary: " << employees[i].getSalary() << endl;
+//         }
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
-== == == == == == == == == == == == == == =
+// // == == == == == == == == == == == == == == =
 #include <iostream>
 
                                               using namespace std;
