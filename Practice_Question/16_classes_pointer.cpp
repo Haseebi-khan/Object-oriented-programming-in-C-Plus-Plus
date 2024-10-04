@@ -24,7 +24,7 @@ Line::Line(int len)
 
     // allocate memory for the pointer;
     ptr = new int;
-    ptr = len;
+    *ptr = len;
 }
 
 Line::Line(const Line &obj)
