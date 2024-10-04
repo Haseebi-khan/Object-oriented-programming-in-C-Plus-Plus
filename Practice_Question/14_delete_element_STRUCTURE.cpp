@@ -6,48 +6,46 @@ using namespace std;
 
 struct N
 {
-    string  f_name,  
-            middle,
-            l_name;
+    string f_name,
+        middle,
+        l_name;
     long long number;
 };
 
 typedef struct NameNumberAddressesCompanyAgeProfession
 {
-    N  nameAndNumber;
-    string  profession, 
-            address;
-    long    age;
-           
-}Personinfo; 
+    N nameAndNumber;
+    string profession,
+        address;
+    long age;
 
+} Personinfo;
 
 int main()
 {
 
     int size = 0;
 
-    Personinfo* persons = new Personinfo[size];
-    
+    Personinfo *persons = new Personinfo[size];
+
     string back;
     do
     {
         Personinfo person;
 
         cout << "Enter First Name: ";
-        getline(cin,person.nameAndNumber.f_name);
+        getline(cin, person.nameAndNumber.f_name);
         cout << "Enter Middle Name: ";
-        getline(cin,person.nameAndNumber.middle);
+        getline(cin, person.nameAndNumber.middle);
         cout << "Enter Last Name: ";
-        getline(cin,person.nameAndNumber.l_name);
+        getline(cin, person.nameAndNumber.l_name);
         cout << "Enter Number: ";
-        cin>>person.nameAndNumber.number;
+        cin >> person.nameAndNumber.number;
         cin.ignore();
         cout << "Address: ";
-        getline(cin,person.address);
+        getline(cin, person.address);
         cout << "Profession: ";
-        getline(cin,person.profession);
-
+        getline(cin, person.profession);
 
         cout << "Age: ";
         cin >> person.age;
@@ -57,8 +55,7 @@ int main()
             cin >> person.age;
         }
 
-
-        Personinfo* new_persons = new Personinfo[size + 1];
+        Personinfo *new_persons = new Personinfo[size + 1];
 
         for (int i = 0; i < size; i++)
         {
@@ -68,27 +65,22 @@ int main()
         delete[] persons;
 
         persons = new_persons;
-        
-
 
         persons[size++] = person;
-        
-
 
         cout << "\tName \tNumber\n";
-        cout << "\t" << person.nameAndNumber.f_name << " " << person.nameAndNumber.l_name 
-        << "\t" << person.nameAndNumber.number << endl;
+        cout << "\t" << person.nameAndNumber.f_name << " " << person.nameAndNumber.l_name
+             << "\t" << person.nameAndNumber.number << endl;
 
         cout << "\tContact have been saved.\n";
         cout << "\tIf you want to go back then press 'x' else press any key: ";
-        
-        
+
         cin >> back;
         cin.ignore();
-        
+
     } while (back != "x");
 
-    for (int i = 0; i < size; ++i) 
+    for (int i = 0; i < size; ++i)
     {
         cout << "\t" << persons[i].nameAndNumber.f_name << " " << persons[i].nameAndNumber.l_name
              << "\t" << persons[i].nameAndNumber.number << endl;
@@ -96,7 +88,5 @@ int main()
 
     delete[] persons;
 
-
     return 0;
-
 }
