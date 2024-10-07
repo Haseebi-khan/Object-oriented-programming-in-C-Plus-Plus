@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
-#include <iomanip>
+#include <iomanip>  
 #include <ctime>   // For time()
 #include <cstdlib> // For rand() and srand()
-#include <fstream>
+#include <fstream> // for file.txt
 #include <stdio.h>
 #include <unistd.h>  // for usleep() function
 #include <termios.h> // for struct termios and terminal control
