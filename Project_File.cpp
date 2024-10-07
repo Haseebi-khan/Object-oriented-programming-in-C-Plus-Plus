@@ -2,7 +2,7 @@
 #include <string>
 #include <iomanip>  
 #include <ctime>   // For time()
-#include <cstdlib> // For rand() and srand()
+#include <cstdlib>  // For rand() and srand()
 #include <fstream> // for file.txt
 #include <stdio.h>
 #include <unistd.h>  // for usleep() function
