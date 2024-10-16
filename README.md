@@ -27,7 +27,7 @@ This project utilizes advanced C++ features, including:
 - 🔢 **Static Data Types** for efficient memory management
 - ⚙️ **Functions** and **windows.h** built-in functions
 - 🎞️ **Console Animation** using **windows.h**
-- 🤝 Practical implementations of **friend functions** and **friend classes**
+- 🤝 Practical implementations of **friend functions**,**friend classes** and **termios.h** library
 
 ---
 
